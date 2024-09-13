@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+
+:root {
+  --section-margin: 8rem;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab";
+}
+
+*:focus,
+*:focus-visible {
+  outline: none;
+}
+
+*::selection {
+  background-color: greenyellow;
+  color: #000;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1.7;
+  overflow-x: hidden;
+  /* height: 100vh; */
+  width: 100%;
+  background-color: #e1e4e8;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: url("./assets/images/main-bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.primary-heading {
+  color: #fff;
+  font-weight: 300;
+  font-size: 8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60rem;
+  font-style: italic;
+}
+
+.header-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.3;
+}
+
+.heading-secondary {
+  font-weight: 300;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
+  transition: all 0.1s ease;
+  /* background-color: rgba(79, 71, 78, 1); */
+  z-index: 22;
+  width: 100%;
+  padding: 1.2rem 3rem;
+}
+
+.section .t-heading {
+  background-color: #fff;
+  color: #000;
+  font-weight: 700;
+  font-size: 3.8rem;
+  text-align: center;
+  margin: 2rem var(--section-margin);
+}
+
+.section-1.section-text {
+  background: url("./assets/images/text-bg-1.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(108%);
+  padding: 6rem 0 10rem;
+}
+
+.section p {
+  font-family: "Comfortaa";
+  font-size: 2.6rem;
+  margin: 0 var(--section-margin);
+  padding: 5rem 0;
+  line-height: 2;
+}
+
+.section p.bold {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.section-2.section-text,
+.section-3.section-text {
+  background: url("./assets/images/test-bg-2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 6rem 0 10rem;
+}
+
+.map {
+  display: flex;
+  margin: 3rem var(--section-margin) 0;
+}
+
+.map img {
+  width: 35rem;
+  aspect-ratio: 1;
+}
+
+.map span {
+  font-size: 1.8rem;
+  margin-left: 5rem;
+}
+
+.section-3 .map {
+  background-color: #e1e4e8;
+  width: 100%;
+  margin: 3rem 0;
+  padding: 3rem var(--section-margin);
+}
+
+.section-3 .map span {
+  background-color: #fff;
+  height: fit-content;
+  width: 100%;
+  padding: 1rem;
+}
+
+::-webkit-scrollbar {
+  -webkit-border-radius: 100px;
+  background-color: #e1e4e8;
+  width: 9px;
+  width: 9px;
+}
+::-webkit-scrollbar {
+  height: 16px;
+  overflow: visible;
+  width: 10px;
+}
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 100px;
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.7);
+
+  background-clip: padding-box;
+  border: solid transparent;
+  /* border-width: 1px 1px 1px 6px; */
+  min-height: 28px;
+  padding: 100px 0 0;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+}
+::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 4px;
+}
+
+/* 832px */
+@media (max-width: 52em) {
+  :root {
+    --section-margin: 4rem;
+  }
+
+  .primary-heading {
+    font-size: 6rem;
+    width: 100%;
+    padding: 0 5rem;
+  }
+
+  .section p {
+    font-size: 2rem;
+  }
+
+  .section p.bold {
+    font-weight: 700;
+    font-size: 2.4rem;
+  }
+
+  .map img {
+    width: 30rem;
+  }
+}
+
+/* 544px */
+@media (max-width: 34em) {
+  :root {
+    --section-margin: 1rem;
+  }
+
+  .primary-heading {
+    font-size: 4rem;
+    padding: 0 2rem;
+  }
+
+  .section .t-heading {
+    font-size: 2.6rem;
+  }
+
+  .section p {
+    font-size: 1.8rem;
+  }
+
+  .section p.bold {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  .map img {
+    width: 25rem;
+  }
+
+  .map span {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+  }
+}
+
+/* 400px */
+@media (max-width: 25em) {
+  .primary-heading {
+    font-size: 2.8rem;
+    line-height: 2;
+    padding: 0 1rem;
+  }
+
+  .section .t-heading {
+    font-size: 2rem;
+  }
+
+  .map img {
+    width: 18rem;
+  }
+
+  .map span {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+  }
+}
